@@ -1,113 +1,127 @@
+Medico – Doctor Appointment Booking System
+
+Medico is a web-based platform designed to simplify the process of booking doctor appointments. It helps patients easily find and schedule consultations with doctors based on specialization, fees, availability, and location. For doctors, Medico offers tools to manage appointments, reduce no-shows, and maintain better communication with patients.
+
 1. Project Title
-Medico - Doctor Appointment booking system
 
-2. Problem Statement
-In today’s world, scheduling medical appointments is often inconvenient and can be hectic due to time issues, thus medico helps you book appointments easily at your convenience. 
-Patients face issues like : 
-Long Waiting lines for appointments, difficulty in finding suitable doctors according to their specialization, affordability etc.
-Clinics and doctors on the other hand face issues like:
-Lack of communication between patients and doctors, reducing no shows.
-3. System Architecture
-Frontend → Backend (API) → Database
-Frontend: React.js with react router for routing
+Medico – Doctor Appointment Booking System
 
+ 2. Problem Statement
 
-Backend: Node.js + Express js REST API
+Scheduling medical appointments is often inconvenient and time-consuming. Patients struggle with:
 
+Long waiting lines
 
-Database:MongoDB
+Difficulty in finding specialized doctors
 
+Affordability concerns
 
-Authentication: JWT based login signup
+Lack of proper tracking for appointments
 
+Doctors and clinics face problems like:
 
-Hosting:
+Poor communication with patients
 
+High rate of no-shows
 
-Frontend → Vercel
+Difficulty managing time slots and patient flow
 
+Medico solves these issues by providing a centralized digital solution for both patients and doctors.
 
-Backend → Render
+ 3. System Architecture
+Frontend  →  Backend (API)  →  Database
 
+Frontend
 
-Database →MongoDB Atlas
+React.js
 
+React Router for routing
 
+Backend
 
-5. Key Features
-Category
-Features
-Authentication & Authorization
-Secure user registration and login using JWT (JSON Web Token). The system provides role-based access control (Doctors/Patients)
-Doctor Search Functionality
-Patients can search for doctors by name, specialization, location, or hospital.
-Advanced Filtering Options
-Users can filter doctors based on consultation fees, ratings, experience, or availability.
-Sorting Mechanism
-Results can be sorted by doctor’s rating, experience, fee, or appointment availability.
-Pagination for Doctor Listings
-To handle large datasets efficiently, the doctor list supports pagination.
-Appointment Booking and Management
-Patients can book, reschedule, or cancel appointments with ease.
-Doctors can view all bookings, approve or reject requests, and update time slots
-Doctor Availability Management
-Doctors can define their available days and time slots.
-Patient Dashboard
-Each patient will have a personalised dashboard displaying appointments, past visits and booking history.
-Admin Panel
-Admin can manage doctor-patient profiles, verification.
-Review and Rating System
-After a consultation, patients can leave feedback and rate doctors.
-Frontend Routing
-Pages: Home, Login, Dashboard, Details, Profile, etc.
+Node.js
 
+Express.js (REST API)
 
+Database
 
+MongoDB (MongoDB Atlas)
+
+Authentication
+
+JWT-based secure login & signup
 
 Hosting
-Deploy both backend and frontend to accessible URLs
 
+Frontend: Vercel
+
+Backend: Render
+
+Database: MongoDB Atlas
+
+ 5. Key Features
+ Authentication & Authorization
+
+JWT-based secure login and registration
+
+Role-based access (Doctor / Patient / Admin)
+
+ Doctor Search Functionality
+
+Search by name, specialization, location, or hospital
+
+Advanced filtering by fees, experience, ratings, availability
+
+Sorting based on rating, experience, fee, etc.
+
+Pagination for handling large datasets
+
+ Appointment Booking
+
+Patients can book, reschedule, or cancel appointments
+
+Doctors can approve/reject bookings and modify time slots
+
+ Doctor Availability Management
+
+Doctors can define available days and time slots
+
+Patient Dashboard
+
+View upcoming appointments
+
+Access past visit history
+
+Track booking records
+
+ Admin Panel
+
+Manage doctors and patient profiles
+
+Verification of doctor details
+
+ Review & Rating System
+
+Patients can rate doctors and leave reviews after consultation
+
+ Frontend Routing
+
+Pages include:
+Home, Login, Dashboard, Details, Profile, etc.
 
 6. Tech Stack
-Layer
-Technologies
-Frontend
-React.js , TailwindCSS
-Backend
-Node.js, Express.js
-Database
-MongoDB 
-Authentication
-JWT
-Hosting
-Vercel , Render, MongoDB Atlas
+Layer	Technologies
+Frontend	React.js, TailwindCSS
+Backend	Node.js, Express.js
+Database	MongoDB
+Authentication	JWT
+Hosting	Vercel, Render, MongoDB Atlas
 
-
-7. API Overview
-Endpoint
-Method
-Description
-Access
-/api/auth/register
-POST
-Register new user
-Public
-/api/auth/login
-POST
-login
-Public
-/api/doctors
-GET
-Get list of all doctors
-Authenticated
-/api/doctors/:id/profile
-PUT
-Update doctor’s profile info
-Authenticated
-/api/appointment/:id
-DELETE
-Cancel appointments
-doctors only
-
-/api/admin/users  GET        Get all patients         public
-
+ 8. API Overview
+Endpoint	Method	Description	Access
+/api/auth/register	POST	Register new user	Public
+/api/auth/login	POST	Login	Public
+/api/doctors	GET	Get list of all doctors	Authenticated
+/api/doctors/:id/profile	PUT	Update doctor profile	Authenticated
+/api/appointment/:id	DELETE	Cancel appointment	Doctor Only
+/api/admin/users	GET	Get all patients	Public
